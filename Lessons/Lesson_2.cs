@@ -41,6 +41,17 @@
             // this will print 1 2 3 and stop
             foreach (int i in All_numbers().Skip(1).Take(3))
                 Console.Write(" " + i);
+
+            // Exercise 1: implement the Take-function used
+            //             in the last loop.
+        }
+        // Exercise 2 - Extra credits!
+        // Implement a function that works like the []
+        // operator for arrays.
+        public static T AtIndex<T>
+            (this IEnumerable<T> elements, int index)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -62,7 +73,7 @@
         public static IEnumerable<T> Take<T>
             (this IEnumerable<T> elements, int num_elements_to_take)
         {
-            // Exercise!
+            // Exercise 1!
             // implement this
             throw new NotImplementedException();
         }
