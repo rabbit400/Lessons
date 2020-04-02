@@ -111,5 +111,65 @@ namespace Lessons
                 yield return transformed_element;
             }
         }
+
+
+        public struct Vector3 { public float x; public float y; public float z; }
+        public struct Float3 { public float x; public float y; public float z; }
+
+        public static IEnumerable<Float3> Exercise_1()
+        {
+            IEnumerable<Vector3> vectors = new Vector3[]
+            {
+                new Vector3{x = 1f, y = 2f, x = 3f},
+                new Vector3{x = 2f, y = -1f, x = -3f},
+            };
+            // You have a list of points of type Vector3.
+            // Convert them to a list of Float3.
+            // But for some silly reason the Vector3 points have 
+            // y as height coordinate and z as forward.
+            // Fix this so that the Float3 points are proper 
+            // with y as forward and z as up.
+            IEnumerable<Float3> floats = null;
+
+            return floats;
+        }
+
+        public struct Person
+        {
+            public string FullName;
+            public int Id;
+        }
+        public struct BothNames
+        { 
+            public string FirstName;
+            public string LastName;
+        }
+        public static BothNames GetBothNames(string fullname)
+        {
+            string[] allNames = fullname.Split(" ");
+            if (allNames.Length != 2)
+                throw new NotImplementedException("Whopsi");
+
+            return new BothNames
+            {
+                FirstName = allNames[0],
+                LastName = allNames[1]
+            };
+        }
+
+        public static void Excercise_2(
+            out Dictionary<int, string> IdToFirstName,
+            out Dictionary<int, string> IdToLastName)
+        {
+            IEnumerable<Person> persons = new Person[]
+            {
+                new Person { FullName = "Cute Mouse", Id = 13 },
+                new Person { FullName =  "Cute Cat", Id = 31 },
+            };
+            // Create the proper dictionaries.
+            // Id use GetBothNames, Select/Map, and linqs ToDictionary.
+            IdToFirstName = null;
+            IdToLastName = null;
+        }
     }
 }
