@@ -3,11 +3,6 @@ using System.Collections.Generic;
 
 namespace Lessons
 {
-    // TODO exercises
-    // 1) simple transformation like done in the read
-    // 2) transformation into a ToDictionary so we
-    //    recall what we learned already.
-
     /// This to introduce/recall 
     ///  - the Map function (called Select in linq)
     ///  - start thinking about when and where 
